@@ -1,0 +1,305 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>react-native-purchases - v5.0.2</title>
+	<meta name="description" content="Documentation for react-native-purchases - v5.0.2">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">react-native-purchases - v5.0.2</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>react-native-purchases - v5.0.2</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<p align="center">
+					<img src="https://uploads-ssl.webflow.com/5e2613cf294dc30503dcefb7/5e752025f8c3a31d56a51408_logo_red%20(1).svg" width="350" alt="RevenueCat"/>
+					<br>
+					React Native in-app subscriptions made easy
+				</p>
+				<a href="#what-is-react-native-purchases" id="what-is-react-native-purchases" style="color: inherit; text-decoration: none;">
+					<h1>What is react-native-purchases?</h1>
+				</a>
+				<p>React Native Purchases is a client for the <a href="https://www.revenuecat.com/">RevenueCat</a> subscription and purchase tracking system. It is an open source framework that provides a wrapper around <code>StoreKit</code>, <code>Google Play Billing</code> and the RevenueCat backend to make implementing in-app purchases in <code>React Native</code> easy.</p>
+				<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+					<h2>Features</h2>
+				</a>
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>RevenueCat</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td>✅</td>
+							<td>Server-side receipt validation</td>
+						</tr>
+						<tr>
+							<td>➡️</td>
+							<td><a href="https://docs.revenuecat.com/docs/webhooks">Webhooks</a> - enhanced server-to-server communication with events for purchases, renewals, cancellations, and more</td>
+						</tr>
+						<tr>
+							<td>🎯</td>
+							<td>Subscription status tracking - know whether a user is subscribed whether they&#39;re on iOS, Android or web</td>
+						</tr>
+						<tr>
+							<td>📊</td>
+							<td>Analytics - automatic calculation of metrics like conversion, mrr, and churn</td>
+						</tr>
+						<tr>
+							<td>📝</td>
+							<td><a href="https://docs.revenuecat.com/docs">Online documentation</a> and <a href="https://revenuecat.github.io/react-native-purchases-docs/">SDK reference</a> up to date</td>
+						</tr>
+						<tr>
+							<td>🔀</td>
+							<td><a href="https://www.revenuecat.com/integrations">Integrations</a> - over a dozen integrations to easily send purchase data where you need it</td>
+						</tr>
+						<tr>
+							<td>💯</td>
+							<td>Well maintained - <a href="https://github.com/RevenueCat/purchases-ios/releases">frequent releases</a></td>
+						</tr>
+						<tr>
+							<td>📮</td>
+							<td>Great support - <a href="https://revenuecat.zendesk.com">Help Center</a></td>
+						</tr>
+				</tbody></table>
+				<a href="#requirements" id="requirements" style="color: inherit; text-decoration: none;">
+					<h2>Requirements</h2>
+				</a>
+				<p>The minimum React Native version this SDK requires is <code>0.64</code>.</p>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<p>ExpoKit projects of version 33 or higher can successfully use react-native-purchases. If you haven&#39;t upgraded, you can follow <a href="https://docs.expo.io/versions/latest/expokit/expokit/#upgrading-expokit">the instructions here to upgrade</a>. </p>
+				<p>If you&#39;re planning on ejecting from Expo, upgrade your expo version <em>first</em>, THEN eject. It&#39;ll save you a whole lot of hassle.</p>
+				<a href="#add-the-library-to-the-project" id="add-the-library-to-the-project" style="color: inherit; text-decoration: none;">
+					<h3>Add the library to the project</h3>
+				</a>
+				<p><code>$ npm install react-native-purchases --save</code>
+					or
+				<code>$ yarn add react-native-purchases</code></p>
+				<a href="#link-library-to-the-project" id="link-library-to-the-project" style="color: inherit; text-decoration: none;">
+					<h3>Link library to the project</h3>
+				</a>
+				<p><code>$ react-native link react-native-purchases</code></p>
+				<a href="#additional-ios-setup" id="additional-ios-setup" style="color: inherit; text-decoration: none;">
+					<h3>Additional iOS Setup</h3>
+				</a>
+				<a href="#if-your-project-uses-cocoapods" id="if-your-project-uses-cocoapods" style="color: inherit; text-decoration: none;">
+					<h4>If your project uses Cocoapods</h4>
+				</a>
+				<p>If your project already uses Cocoapods to install iOS dependencies, common in ExpoKit projects, linking the library should have added it to the podfile. If it hasn&#39;t, add the following to your project&#39;s podfile to reference the library from your node_modules folder:</p>
+				<pre><code class="language-ruby"><span style="color: #000000">pod </span><span style="color: #A31515">&#039;RNPurchases&#039;</span><span style="color: #000000">, :path =&gt; </span><span style="color: #A31515">&#039;../node_modules/react-native-purchases&#039;</span>
+<span style="color: #000000">    :inhibit_warnings =&gt; </span><span style="color: #0000FF">true</span>
+</code></pre>
+				<p>In your <code>ios</code> folder, run <code>pod install</code>. If you&#39;ve just upgraded ExpoKit, you might need to upgrade cocoapods to the newest version: <code>sudo gem install cocoapods</code>. </p>
+				<a href="#migrating-from-manual-installation-if-your-project-doesn39t-use-cocoapodscreate" id="migrating-from-manual-installation-if-your-project-doesn39t-use-cocoapodscreate" style="color: inherit; text-decoration: none;">
+					<h4>Migrating from manual installation (if your project doesn&#39;t use CocoapodsCreate)</h4>
+				</a>
+				<a href="#remove-the-framework-reference-from-your-project" id="remove-the-framework-reference-from-your-project" style="color: inherit; text-decoration: none;">
+					<h5>Remove the Framework Reference from your project</h5>
+				</a>
+				<ol>
+					<li>Remove <code>Purchases.framework</code> and <code>PurchasesHybridCommon.framework</code> from the libraries section of the project. </li>
+				</ol>
+				<a href="#remove-ios-frameworks-to-embedded-binaries" id="remove-ios-frameworks-to-embedded-binaries" style="color: inherit; text-decoration: none;">
+					<h5>Remove iOS Frameworks to Embedded Binaries</h5>
+				</a>
+				<ol>
+					<li>In Xcode, in project manager, select your app target.</li>
+					<li>Select the general tab</li>
+					<li>Look for <code>Purchases.framework</code> and <code>PurchasesHybridCommon.framework</code> in the Embedded Binaries section and remove them.</li>
+				</ol>
+				<p>Remove <code>$(PROJECT_DIR)/../node_modules/react-native-purchases/ios</code> from Framework Search paths in build settings</p>
+				<a href="#remove-strip-frameworks-phase" id="remove-strip-frameworks-phase" style="color: inherit; text-decoration: none;">
+					<h5>Remove Strip Frameworks Phase</h5>
+				</a>
+				<p>During the old manual installation instructions, now deprecated, we indicated to add a build phase to strip fat frameworks. </p>
+				<ol>
+					<li>In Xcode, in project manager, select your app target.</li>
+					<li>Open the <code>Build Phases</code> tab</li>
+					<li>Remove the added <code>Strip Frameworks</code> phase</li>
+					<li>Clean <code>Derived Data</code> </li>
+				</ol>
+				<a href="#link-static-library" id="link-static-library" style="color: inherit; text-decoration: none;">
+					<h5>Link static library</h5>
+				</a>
+				<p>The <code>react-native link</code> command should have added the <code>libRNPurchases.a</code> library to the <em>Linked Frameworks and Libraries</em> section of your app target. If it hasn&#39;t add it like this:</p>
+				<p><img src="https://media.giphy.com/media/U2MMgrdYlkRhEcy80J/giphy.gif" alt=""></p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<p>Please follow the <a href="https://docs.revenuecat.com/docs/">Quickstart Guide</a> for more information on how to use the SDK</p>
+				<a href="#sdk-reference" id="sdk-reference" style="color: inherit; text-decoration: none;">
+					<h2>SDK Reference</h2>
+				</a>
+				<p>Our full SDK reference <a href="https://revenuecat.github.io/react-native-purchases-docs">can be found here</a>.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/billing_feature.html" class="tsd-kind-icon">BILLING_<wbr>FEATURE</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/intro_eligibility_status.html" class="tsd-kind-icon">INTRO_<wbr>ELIGIBILITY_<wbr>STATUS</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/package_type.html" class="tsd-kind-icon">PACKAGE_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/proration_mode.html" class="tsd-kind-icon">PRORATION_<wbr>MODE</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/purchases_error_code.html" class="tsd-kind-icon">PURCHASES_<wbr>ERROR_<wbr>CODE</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/purchase_type.html" class="tsd-kind-icon">PURCHASE_<wbr>TYPE</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/default.html" class="tsd-kind-icon">default</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/customerinfo.html" class="tsd-kind-icon">Customer<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/errorinfo.html" class="tsd-kind-icon">Error<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/introeligibility.html" class="tsd-kind-icon">Intro<wbr>Eligibility</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/loginresult.html" class="tsd-kind-icon">Log<wbr>InResult</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasesconfiguration.html" class="tsd-kind-icon">Purchases<wbr>Configuration</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasesentitlementinfo.html" class="tsd-kind-icon">Purchases<wbr>Entitlement<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasesentitlementinfos.html" class="tsd-kind-icon">Purchases<wbr>Entitlement<wbr>Infos</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchaseserror.html" class="tsd-kind-icon">Purchases<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasesintroprice.html" class="tsd-kind-icon">Purchases<wbr>Intro<wbr>Price</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasesoffering.html" class="tsd-kind-icon">Purchases<wbr>Offering</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasesofferings.html" class="tsd-kind-icon">Purchases<wbr>Offerings</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasespackage.html" class="tsd-kind-icon">Purchases<wbr>Package</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasespromotionaloffer.html" class="tsd-kind-icon">Purchases<wbr>Promotional<wbr>Offer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasesstoreproduct.html" class="tsd-kind-icon">Purchases<wbr>Store<wbr>Product</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasesstoreproductdiscount.html" class="tsd-kind-icon">Purchases<wbr>Store<wbr>Product<wbr>Discount</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/purchasesstoretransaction.html" class="tsd-kind-icon">Purchases<wbr>Store<wbr>Transaction</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/upgradeinfo.html" class="tsd-kind-icon">Upgrade<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#customerinfoupdatelistener" class="tsd-kind-icon">Customer<wbr>Info<wbr>Update<wbr>Listener</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#makepurchaseresult" class="tsd-kind-icon">Make<wbr>Purchase<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#shouldpurchasepromoproductlistener" class="tsd-kind-icon">Should<wbr>Purchase<wbr>Promo<wbr>Product<wbr>Listener</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
